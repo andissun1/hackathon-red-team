@@ -1,0 +1,27 @@
+.text {
+    color: var(--main-60);
+}
+
+.smallText {
+    font-size: 16px;
+}
+
+.mediumText {
+    font-size: 18px;
+}
+
+.bigText {
+    font-size: 24px;
+}
+
+.small {
+    padding-bottom: 16px;
+}
+
+.medium {
+    padding-bottom: 24px;
+}
+
+.big {
+    padding-bottom: 32px
+}

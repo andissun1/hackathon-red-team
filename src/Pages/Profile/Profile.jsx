@@ -1,3 +1,5 @@
+import { Title } from "../../Shared/Title/Title";
+
 export const Profile = (props) => {
-  return <div>Страница участника</div>;
+  return <Title>Пользователь:</Title>;
 };
