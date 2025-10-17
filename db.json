@@ -1,0 +1,49 @@
+{
+  "profiles": [
+    {
+      "id": "01",
+      "name": "Вася",
+      "surname": "Пупкин",
+      "age": 19,
+      "imgURL": "https://t4.ftcdn.net/jpg/06/48/39/19/360_F_648391979_uMz6EwAlKNIJnK9r46UpTiM17nT8GuLl.jpg",
+      "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
+      "social": { "VK": "https://vk.com/id807345344?from=search" },
+      "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
+      "bages": [
+        { "name": "Тимлид", "colour": "green" },
+        { "name": "test", "colour": "yellow" }
+      ],
+      "other": "Я принимал участие в создании базы данных для этого сайта."
+    },
+    {
+      "id": "02",
+      "name": "Игорь",
+      "surname": "Пупкин",
+      "age": 19,
+      "imgURL": "https://t4.ftcdn.net/jpg/06/48/39/19/360_F_648391979_uMz6EwAlKNIJnK9r46UpTiM17nT8GuLl.jpg",
+      "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
+      "social": { "VK": "https://vk.com/id807345344?from=search" },
+      "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
+      "bages": [
+        { "name": "Тимлид", "colour": "green" },
+        { "name": "test", "colour": "yellow" }
+      ],
+      "other": "Я принимал участие в создании базы данных для этого сайта."
+    },
+    {
+      "id": "03",
+      "name": "Кирилл",
+      "surname": "Пупкин",
+      "age": 19,
+      "imgURL": "https://t4.ftcdn.net/jpg/06/48/39/19/360_F_648391979_uMz6EwAlKNIJnK9r46UpTiM17nT8GuLl.jpg",
+      "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
+      "social": { "VK": "https://vk.com/id807345344?from=search" },
+      "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
+      "bages": [
+        { "name": "Тимлид", "colour": "green" },
+        { "name": "test", "colour": "yellow" }
+      ],
+      "other": "Я принимал участие в создании базы данных для этого сайта."
+    }
+  ]
+}
