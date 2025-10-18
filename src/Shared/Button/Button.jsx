@@ -1,5 +1,12 @@
-import style from './button.module.css';
-export const Button = ({ children, rounded = 'rounded', onClick, ...props }) => {
+
+import style from "./button.module.css";
+export const Button = ({
+  children,
+  rounded = "rounded",
+  cancel = false,
+  onClick, ...props 
+}) => {
+
   return (
     <button
       {...props}
