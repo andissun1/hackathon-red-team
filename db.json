@@ -2,38 +2,58 @@
   "profiles": [
     {
       "id": "01",
-      "name": "Кот",
-      "surname": "Котов",
-      "age": 19,
-      "imgURL": "https://raw.githubusercontent.com/andissun1/hackathon-red-team/54b70188ad9e2356d44f0795d46ed6ca98ab2904/public/default-photo.jpg",
-      "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
-      "social": { "VK": "https://vk.com/id807345344?from=search" },
-      "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
+      "name": "Мария",
+      "surname": "Беззубова",
+      "age": 29,
+      "imgURL": "https://i.pinimg.com/736x/6c/c4/fa/6cc4fa39f35b9b5aaa06898a4ac0f694.jpg",
+      "skills": { "HTML": 100, "CSS": 90, "JavaScript": 80, "React": 60 },
+      "social": { "VK": "https://vk.com/id136169881" },
+      "about": "Занимаюсь программированием, так же в свободное время люблю позаниматься спортом, танцами, чтением.",
       "badges": [
-        { "text": "Тимлид", "color": "dark" },
-        { "text": "test", "color": "light" }
+        { "text": "Разработчик", "color": "dark" },
+        { "text": "Верстка", "color": "light" }
       ],
-      "other": "Я принимал участие в создании базы данных для этого сайта."
+      "portfolio": null,
+      "other": "Я принимала участие в создании стилей для компонентов внутри данного проекта. Это был интересный опыт, надеюсь он приведет к чему-то большему."
     },
     {
       "id": "02",
-      "name": "Игорь",
-      "surname": "Пупкин",
-      "age": 19,
-      "imgURL": "https://i.pinimg.com/originals/e3/7e/f6/e37ef63318c6f18a6456fd8172c006ea.jpg",
+      "name": "Андрей",
+      "surname": "Кочнев",
+      "age": 26,
+      "imgURL": "https://sun9-7.userapi.com/s/v1/ig2/WQG-JRGiJLPgHmW3NkgxpTwPJD5L9jCgobPrD-TeamYUyC7QOjqI4TNTpZ-D4vlxm1Ll32jmAtQD2nOwgk1xwMH9.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440,2560x2560&from=bu&cs=2560x0",
       "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
-      "social": { "VK": "https://vk.com/id807345344?from=search" },
-      "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
-      "badges": [
-        { "text": "Тимлид", "color": "medium" },
-        { "text": "test", "color": "medium" }
+      "social": { "VK": "https://vk.com/andissun" },
+      "about": "Изучаю React, JS, CSS. В свободное время играю на гитаре и выбираюсь в тайм-кафе для встречи с друзьями. Очень люблю сыграть партеечку в Balatro.",
+      "badges": [{ "text": "Тимлид", "color": "medium" }],
+      "portfolio": [
+        {
+          "image": "https://i.postimg.cc/mZjsJZ1V/2025-10-18-21-07-16.png",
+          "title": "Сайт для ведения блогов с админкой"
+        },
+        {
+          "image": "https://i.postimg.cc/SNKhh0cg/2025-10-18-21-09-10.png",
+          "title": "Игра змейка"
+        },
+        {
+          "image": "https://i.postimg.cc/5NtVVc8P/2025-10-18-21-18-01.png",
+          "title": "ToDo-list с бэкенд логикой на Firebase"
+        },
+        {
+          "image": "https://i.postimg.cc/MZ5SNZjk/2025-10-18-21-21-54.png",
+          "title": "Калькулятор на чистом JS"
+        },
+        {
+          "image": "https://i.postimg.cc/8k4S9krQ/2025-10-18-21-23-42.png",
+          "title": "Приложение по прогнозу погоды"
+        }
       ],
-      "other": "Я принимал участие в создании базы данных для этого сайта."
+      "other": "Я принимал участие в создании базы данных для этого сайта и настройке Redux. Также зацените какой слайдер сделал!"
     },
     {
       "id": "03",
-      "name": "Кирилл",
-      "surname": "Пупкин",
+      "name": "Илья",
+      "surname": "Крутов",
       "age": 19,
       "imgURL": "https://i.pinimg.com/736x/5e/73/f9/5e73f978468820172160e6a1ad70d62e.jpg",
       "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
@@ -43,7 +63,7 @@
         { "text": "Тимлид", "color": "light" },
         { "text": "test", "color": "dark" }
       ],
-      "other": "Я принимал участие в создании базы данных для этого сайта."
+      "other": ""
     }
   ]
 }

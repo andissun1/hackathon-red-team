@@ -1,16 +1,17 @@
+
 import style from "./button.module.css";
 export const Button = ({
   children,
   rounded = "rounded",
   cancel = false,
-  onClick,
+  onClick, ...props 
 }) => {
+
   return (
     <button
+      {...props}
       onClick={onClick}
-      className={`${style.button} ${style[rounded] ? style[rounded] : ""} ${
-        cancel ? style.cancel : ""
-      }`}
+      className={`${style.button} ${style[rounded] ? style[rounded] : ''}`}
     >
       {children}
     </button>
