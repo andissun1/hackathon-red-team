@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+:root {
+    --main-0: #fff;
+    --main-10: #f9f8f6;
+    --main-20: #eeece7;
+    --main-30: #e1dfdb;
+    --main-40: #bebab1;
+    --main-50: #a6a196;
+    --main-60: #7c7769;
+    --main-70: #655f53;
+    --main-80: #474338;
+    --main-90: #2b2822;
+    --main-100: #000;
+    --red: #cc0000;
+}
+    
+[data-theme="dark"] {
+    --main-10: #121212;
+    --main-20: #1e1e1e;
+    --main-30: #2d2d2d;
+    --main-40: #8d8d8d;
+    --main-50: #b3b3b3;
+    --main-60: #ffffff;
+}
+
+@font-face {
+    font-family: 'gnf';
+    src: url('/src/assets/fonts/GNF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
