@@ -2,10 +2,10 @@
   "profiles": [
     {
       "id": "01",
-      "name": "Вася",
-      "surname": "Пупкин",
+      "name": "Кот",
+      "surname": "Котов",
       "age": 19,
-      "imgURL": "https://avatars.mds.yandex.net/i?id=c9e39c7f7c75e22619a3f60e8d310c80_l-4591612-images-thumbs&n=13",
+      "imgURL": "https://raw.githubusercontent.com/andissun1/hackathon-red-team/54b70188ad9e2356d44f0795d46ed6ca98ab2904/public/default-photo.jpg",
       "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
       "social": { "VK": "https://vk.com/id807345344?from=search" },
       "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
