@@ -10,8 +10,8 @@
       "social": { "VK": "https://vk.com/id807345344?from=search" },
       "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
       "badges": [
-        { "text": "Тимлид", "color": "green" },
-        { "text": "test", "color": "yellow" }
+        { "text": "Тимлид", "color": "dark" },
+        { "text": "test", "color": "light" }
       ],
       "other": "Я принимал участие в создании базы данных для этого сайта."
     },
@@ -25,8 +25,8 @@
       "social": { "VK": "https://vk.com/id807345344?from=search" },
       "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
       "badges": [
-        { "text": "Тимлид", "color": "green" },
-        { "text": "test", "color": "yellow" }
+        { "text": "Тимлид", "color": "medium" },
+        { "text": "test", "color": "medium" }
       ],
       "other": "Я принимал участие в создании базы данных для этого сайта."
     },
@@ -40,8 +40,8 @@
       "social": { "VK": "https://vk.com/id807345344?from=search" },
       "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
       "badges": [
-        { "text": "Тимлид", "color": "green" },
-        { "text": "test", "color": "yellow" }
+        { "text": "Тимлид", "color": "light" },
+        { "text": "test", "color": "dark" }
       ],
       "other": "Я принимал участие в создании базы данных для этого сайта."
     }
