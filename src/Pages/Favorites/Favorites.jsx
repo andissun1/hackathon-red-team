@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { Card } from '../../Shared/Card/Card';
-import { Title } from '../../Shared/Title/Title';
-import { getFavorites } from '../../Store/appReducer';
-import { useEffect } from 'react';
-
+import { useDispatch, useSelector } from "react-redux";
+import { Card } from "../../Shared/Card/Card";
+import { Title } from "../../Shared/Title/Title";
+import { getFavorites } from "../../Store/appReducer";
+import { useEffect } from "react";
+import style from "./favourites.module.css";
 export const Favorites = (props) => {
   const dispatch = useDispatch();
   const profiles = useSelector((store) => store.app.profiles);
@@ -18,19 +18,21 @@ export const Favorites = (props) => {
   return (
     <>
       <Title>Избранное</Title>
-      {profiles.map(({ id, name, surname, age, about, badges, imgURL }) => (
-        <Card
-          id={id}
-          key={id}
-          name={name}
-          imgURL={imgURL}
-          surname={surname}
-          age={age}
-          about={about}
-          badge={badges[0]}
-          favourite={favorites.includes(id)}
-        />
-      ))}
+      <div className={style.cardsContainer}>
+        {profiles.map(({ id, name, surname, age, about, badges, imgURL }) => (
+          <Card
+            id={id}
+            key={id}
+            name={name}
+            imgURL={imgURL}
+            surname={surname}
+            age={age}
+            about={about}
+            badge={badges[0]}
+            favourite={favorites.includes(id)}
+          />
+        ))}
+      </div>
     </>
   );
 };
