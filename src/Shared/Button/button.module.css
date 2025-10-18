@@ -3,10 +3,11 @@
     min-height: auto;
     font-size: 16px;
     background: white;
-    border: 1px solid var(--main-80);
+    border: 1px solid var(--main-60);
     cursor: pointer;
     color: var(--main-80);
     transition: all .75s;
+    font-weight: 500;
 }
 .rounded {
     border-radius: 6px;

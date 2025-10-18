@@ -16,8 +16,6 @@ export default function HeartIcon({ variant = "outline" }) {
       fill={isFilled ? color : "none"}
       stroke={isFilled ? "none" : color}
       strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d={isFilled ? filledPath : outlinePath} />

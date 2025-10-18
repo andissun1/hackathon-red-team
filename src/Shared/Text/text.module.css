@@ -15,13 +15,21 @@
 }
 
 .small {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .medium {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .big {
-    padding-bottom: 32px
+    margin-bottom: 32px
+}
+
+.limited {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
