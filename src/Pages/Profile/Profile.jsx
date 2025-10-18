@@ -1,26 +1,25 @@
-import { Badge } from "../../Shared/Badge/Badge";
-import { ProgressCircle } from "../../Shared/ProgressCircle/ProgressCircle";
-import { Text } from "../../Shared/Text/Text";
-import { Title } from "../../Shared/Title/Title";
-import style from "./profile.module.css";
-const testProfile = {
-  id: "01",
-  name: "Мария",
-  surname: "Беззубова",
-  age: 29,
-  imgURL: "./../../../public/default-photo.jpg",
-  skills: { HTML: 100, CSS: 90, JavaScript: 80, React: 60 },
-  social: { VK: "https://vk.com/id136169881" },
-  about:
-    "Занимаюсь программированием, так же в свободное время люблю позаниматься спортом, танцами, чтение",
-  badges: [
-    { text: "Разработчик", color: "dark" },
-    { text: "Верстка", color: "light" },
-  ],
-  other:
-    "Я принимала участие в создании стилей для компонентов внутри данного проекта. Это был интересный опыт, надеюсь он приведет к чему-то большему",
-};
-export const Profile = ({ profile = testProfile }) => {
+import { useDispatch, useSelector } from 'react-redux';
+import { Slider } from '../../Components/Slider/Slider';
+import { Badge } from '../../Shared/Badge/Badge';
+import { ProgressCircle } from '../../Shared/ProgressCircle/ProgressCircle';
+import { Text } from '../../Shared/Text/Text';
+import { Title } from '../../Shared/Title/Title';
+import style from './profile.module.css';
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { getProfileByID } from '../../Store/profileReducer';
+
+export const Profile = () => {
+  const profileID = useParams().id;
+  const dispatch = useDispatch();
+  const profile = useSelector((store) => store.profile);
+
+  useEffect(() => {
+    dispatch(getProfileByID(profileID));
+  }, []);
+
+  if (!profile.id) return <h2>Загрузка...</h2>;
+
   return (
     <>
       <Title>Страница пользователя</Title>
@@ -32,13 +31,7 @@ export const Profile = ({ profile = testProfile }) => {
             {profile.badges &&
               profile.badges.length > 0 &&
               profile.badges.map((badge) => {
-                return (
-                  <Badge
-                    key={badge.text}
-                    color={badge.color}
-                    text={badge.text}
-                  />
-                );
+                return <Badge key={badge.text} color={badge.color} text={badge.text} />;
               })}
           </div>
           <div>
@@ -77,11 +70,12 @@ export const Profile = ({ profile = testProfile }) => {
               ))}
             </div>
           </div>
-          <Text textSize={"small"} bottomPadding={""}>
+          <Text textSize={'small'} bottomPadding={''}>
             {profile.other}
           </Text>
         </div>
       </div>
+      {profile.portfolio && <Slider portfolio={profile.portfolio} />}
     </>
   );
 };

@@ -1,9 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Card } from "../../Shared/Card/Card";
-import { Title } from "../../Shared/Title/Title";
-import { getFavorites } from "../../Store/appReducer";
-import { useEffect } from "react";
-import style from "./favourites.module.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { Card } from '../../Shared/Card/Card';
+import { Title } from '../../Shared/Title/Title';
+import { getFavorites } from '../../Store/appReducer';
+import { useEffect } from 'react';
+import style from './favourites.module.css';
+import { Slider } from '../../Components/Slider/Slider';
 export const Favorites = (props) => {
   const dispatch = useDispatch();
   const profiles = useSelector((store) => store.app.profiles);
@@ -33,6 +34,7 @@ export const Favorites = (props) => {
           />
         ))}
       </div>
+      <Slider />
     </>
   );
 };

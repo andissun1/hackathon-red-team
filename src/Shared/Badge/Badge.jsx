@@ -1,5 +1,5 @@
-import style from "./badge.module.css";
+import style from './badge.module.css';
 
-export const Badge = ({ color = "dark", text }) => {
+export const Badge = ({ color = 'dark', text }) => {
   return <span className={`${style.badge} ${style[color]}`}>{text}</span>;
 };
