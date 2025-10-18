@@ -1,3 +1,5 @@
+import { Title } from "../../Shared/Title/Title";
+
 export const Favorites = (props) => {
-  return <div>Страница избранного</div>;
+  return <Title>Избранное</Title>;
 };

@@ -1,0 +1,35 @@
+.text {
+    color: var(--main-60);
+}
+
+.smallText {
+    font-size: 16px;
+}
+
+.mediumText {
+    font-size: 18px;
+}
+
+.bigText {
+    font-size: 24px;
+}
+
+.small {
+    margin-bottom: 16px;
+}
+
+.medium {
+    margin-bottom: 24px;
+}
+
+.big {
+    margin-bottom: 32px
+}
+
+.limited {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

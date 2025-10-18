@@ -1,3 +1,5 @@
+import { Title } from "../../Shared/Title/Title";
+
 export const ErrorPage = (props) => {
-  return <div>Страница ошибки</div>;
+  return <Title>Упс... что-то пошло не так</Title>;
 };

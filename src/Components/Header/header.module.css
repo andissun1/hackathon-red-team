@@ -1,0 +1,27 @@
+.link {
+    text-decoration: none;
+    color: var(--main-100);
+    font-size: 20px;
+}
+
+.link:hover {
+    font-weight: 600;
+}
+
+.linkContainer {
+    display: flex;
+    gap: 16px;
+}
+
+.header {
+    padding: 16px 36px;
+    border-bottom: 1px solid var(--main-40);
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
