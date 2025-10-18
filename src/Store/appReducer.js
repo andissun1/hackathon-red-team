@@ -4,6 +4,8 @@ const APP_TYPES = {
   resetAppState: 'resetAppState',
   addToFavorites: 'addToFavorites',
   removeFromFavorites: 'removeFromFavorites',
+  setModalParams: 'setModalParams',
+  closeModal: 'closeModal',
 };
 
 export const appActions = {
@@ -12,11 +14,14 @@ export const appActions = {
   resetAppState: (payload) => ({ type: APP_TYPES.resetAppState, payload }),
   addToFavorites: (payload) => ({ type: APP_TYPES.addToFavorites, payload }),
   removeFromFavorites: (payload) => ({ type: APP_TYPES.removeFromFavorites, payload }),
+  setModalParams: (payload) => ({ type: APP_TYPES.setModalParams, payload }),
+  closeModal: () => ({ type: APP_TYPES.closeModal }),
 };
 
 const initialState = {
   favorites: [],
   profiles: null,
+  modal: null,
 };
 
 export const appReducer = (state = initialState, { type, payload }) => {
@@ -40,6 +45,16 @@ export const appReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         favorites: state.favorites.filter((id) => payload !== id),
+      };
+    case APP_TYPES.setModalParams:
+      return {
+        ...state,
+        modal: { ...state.modal, ...payload },
+      };
+    case APP_TYPES.closeModal:
+      return {
+        ...state,
+        modal: null,
       };
     case APP_TYPES.resetAppState:
       return initialState;
@@ -69,4 +84,23 @@ export const getFavorites = () => async (dispatch, getState) => {
   });
   dispatch(appActions.setProfiles(favoritesProfiles));
   return favoritesProfiles;
+};
+
+export const getConfirmation = (params) => async (dispatch, getState) => {
+  return new Promise((resolve) => {
+    dispatch(
+      appActions.setModalParams({
+        ...params,
+        onClose: () => {
+          dispatch(appActions.closeModal());
+          resolve(false);
+        },
+        onConfirm: () => {
+          getState().modal?.onClose();
+          dispatch(appActions.closeModal());
+          resolve(true);
+        },
+      })
+    );
+  });
 };
