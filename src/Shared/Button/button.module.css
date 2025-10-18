@@ -16,3 +16,12 @@
 .button:hover {
     background: var(--main-20);
 }
+
+.cancel {
+    background: var(--main-60);
+    color: var(--main-0);
+}
+
+.cancel:hover {
+    background: var(--main-70);
+}
