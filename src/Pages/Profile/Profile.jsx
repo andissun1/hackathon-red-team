@@ -1,13 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
-import { Slider } from "../../Components/Slider/Slider";
-import { Badge } from "../../Shared/Badge/Badge";
-import { ProgressCircle } from "../../Shared/ProgressCircle/ProgressCircle";
-import { Text } from "../../Shared/Text/Text";
-import { Title } from "../../Shared/Title/Title";
-import style from "./profile.module.css";
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getProfileByID } from "../../Store/profileReducer";
+import { useDispatch, useSelector } from 'react-redux';
+import { Slider } from '../../Components/Slider/Slider';
+import { Badge } from '../../Shared/Badge/Badge';
+import { ProgressCircle } from '../../Shared/ProgressCircle/ProgressCircle';
+import { Text } from '../../Shared/Text/Text';
+import { Title } from '../../Shared/Title/Title';
+import style from './profile.module.css';
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { getProfileByID } from '../../Store/profileReducer';
+import { Loader } from '../../Shared/Loader/Loader';
 
 export const Profile = () => {
   const profileID = useParams().id;
@@ -18,7 +19,7 @@ export const Profile = () => {
     dispatch(getProfileByID(profileID));
   }, [dispatch, profileID]);
 
-  if (!profile.id) return <h2>Загрузка...</h2>;
+  if (!profile.id) return <Loader />;
 
   return (
     <>
@@ -31,13 +32,7 @@ export const Profile = () => {
             {profile.badges &&
               profile.badges.length > 0 &&
               profile.badges.map((badge) => {
-                return (
-                  <Badge
-                    key={badge.text}
-                    color={badge.color}
-                    text={badge.text}
-                  />
-                );
+                return <Badge key={badge.text} color={badge.color} text={badge.text} />;
               })}
           </div>
           <div>
@@ -76,7 +71,7 @@ export const Profile = () => {
               ))}
             </div>
           </div>
-          <Text textSize={"small"} bottomPadding={""}>
+          <Text textSize={'small'} bottomPadding={''}>
             {profile.other}
           </Text>
         </div>

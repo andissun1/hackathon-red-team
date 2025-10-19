@@ -1,10 +1,11 @@
-import { useEffect } from "react";
-import { Card } from "../../Shared/Card/Card";
-import { Text } from "../../Shared/Text/Text";
-import { Title } from "../../Shared/Title/Title";
-import style from "./main.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { getProfiles } from "../../Store/appReducer";
+import { useEffect } from 'react';
+import { Card } from '../../Shared/Card/Card';
+import { Text } from '../../Shared/Text/Text';
+import { Title } from '../../Shared/Title/Title';
+import style from './main.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProfiles } from '../../Store/appReducer';
+import { Loader } from '../../Shared/Loader/Loader';
 
 export const Main = (props) => {
   const dispatch = useDispatch();
@@ -15,14 +16,14 @@ export const Main = (props) => {
     dispatch(getProfiles());
   }, []);
 
-  if (!profiles) return <h2>Загрузка...</h2>;
+  if (!profiles) return <Loader />;
 
   return (
     <>
       <Title>Главная</Title>
       <Text bottomPadding="big">
-        Мы — команда разработчиков, участвующая в хакатоне от Result University.
-        Наш коллектив объединяет специалистов направления React
+        Мы — команда разработчиков, участвующая в хакатоне от Result University. Наш
+        коллектив объединяет специалистов направления React
       </Text>
       <div className={style.cardsContainer}>
         {profiles.map(({ id, name, surname, age, about, badges, imgURL }) => (

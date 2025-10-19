@@ -1,19 +1,21 @@
-import { Link } from "react-router-dom";
-import style from "./header.module.css";
-import { Logo } from "../Logo/Logo";
-import { Button } from "../../Shared/Button/Button";
-import { useTheme } from "../../Theme/useTheme";
+import { Link } from 'react-router-dom';
+import style from './header.module.css';
+import { Logo } from '../Logo/Logo';
+import { Button } from '../../Shared/Button/Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../../Store/appReducer';
 
 export const Header = (props) => {
-  const { theme, toggleTheme } = useTheme();
+  const dispatch = useDispatch();
+  const theme = useSelector((store) => store.app.theme);
   const routes = [
     {
-      name: "Главная",
-      link: "/",
+      name: 'Главная',
+      link: '/',
     },
     {
-      name: "Избранное",
-      link: "/favorites",
+      name: 'Избранное',
+      link: '/favorites',
     },
   ];
 
@@ -28,8 +30,8 @@ export const Header = (props) => {
             </Link>
           ))}
         </div>
-        <Button onClick={toggleTheme}>
-          {theme === "light" ? "Темнее" : "Светлее"}
+        <Button onClick={() => dispatch(toggleTheme())}>
+          {theme === 'light' ? 'Темнее' : 'Светлее'}
         </Button>
       </div>
     </header>

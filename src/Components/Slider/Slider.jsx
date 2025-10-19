@@ -2,6 +2,7 @@ import style from './slider.module.css';
 import { useState } from 'react';
 import { Button } from '../../Shared/Button/Button';
 import { Title } from '../../Shared/Title/Title';
+import { Loader } from '../../Shared/Loader/Loader';
 
 export const Slider = ({ portfolio }) => {
   const [imageIndex, setImageIndex] = useState(0);
@@ -16,7 +17,7 @@ export const Slider = ({ portfolio }) => {
     return setImageIndex(imageIndex + 1);
   };
 
-  if (!portfolio) return <h2>Загрузка...</h2>;
+  if (!portfolio) return <Loader />;
 
   return (
     <>
@@ -50,7 +51,7 @@ export const Slider = ({ portfolio }) => {
             );
           })}
         </div>
-        <h1 className={style.title}>{portfolio[imageIndex].title}</h1>
+        <Title>{portfolio[imageIndex].title}</Title>
         <Button onClick={nextSlide}>⮞</Button>
       </div>
     </>
