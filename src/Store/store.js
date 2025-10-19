@@ -19,10 +19,13 @@ export const store = legacy_createStore(
   composeEnhancers(applyMiddleware(thunk))
 );
 
-if (localStorage.getItem('favorites') && !store.getState().favorites) {
+if (localStorage.getItem('favorites')) {
   const favorites = JSON.parse(localStorage.getItem('favorites'));
-  const theme = JSON.parse(localStorage.getItem('theme'));
   store.dispatch(appActions.setFavorites(favorites));
+}
+
+if (localStorage.getItem('theme')) {
+  const theme = JSON.parse(localStorage.getItem('theme')) || 'light';
   store.dispatch(appActions.setTheme(theme));
   document.body.dataset.theme = theme;
 }

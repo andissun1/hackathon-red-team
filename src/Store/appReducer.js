@@ -24,7 +24,7 @@ const initialState = {
   favorites: [],
   profiles: null,
   modal: null,
-  theme: null,
+  theme: 'light',
 };
 
 export const appReducer = (state = initialState, { type, payload }) => {
