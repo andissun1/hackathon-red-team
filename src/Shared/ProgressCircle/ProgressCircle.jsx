@@ -1,4 +1,5 @@
-import style from "./progress.module.css";
+import PropTypes from 'prop-types';
+import style from './progress.module.css';
 
 export const ProgressCircle = ({ value, color }) => {
   return (
@@ -6,9 +7,7 @@ export const ProgressCircle = ({ value, color }) => {
       <div
         className={style.circle}
         style={{
-          background: `conic-gradient(${color} ${
-            value * 3.6
-          }deg, #e6e6e6 0deg)`,
+          background: `conic-gradient(${color} ${value * 3.6}deg, #e6e6e6 0deg)`,
         }}
       >
         <div className={style.inner}>
@@ -17,4 +16,9 @@ export const ProgressCircle = ({ value, color }) => {
       </div>
     </div>
   );
+};
+
+ProgressCircle.propTypes = {
+  value: PropTypes.number,
+  color: PropTypes.string,
 };

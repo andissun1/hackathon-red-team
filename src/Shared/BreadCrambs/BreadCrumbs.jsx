@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import style from './BreadCrumbs.module.css';
 
-export const BreadCrumbs = (props) => {
+export const BreadCrumbs = () => {
   const location = useLocation();
 
   let currentLink = '';

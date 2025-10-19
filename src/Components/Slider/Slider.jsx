@@ -3,18 +3,21 @@ import { useState } from 'react';
 import { Button } from '../../Shared/Button/Button';
 import { Title } from '../../Shared/Title/Title';
 import { Loader } from '../../Shared/Loader/Loader';
+import PropTypes from 'prop-types';
 
 export const Slider = ({ portfolio }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const prevSlide = () => {
-    if (imageIndex === 0) return setImageIndex(portfolio.length - 1);
-    return setImageIndex(imageIndex - 1);
+    imageIndex === 0
+      ? setImageIndex(portfolio.length - 1)
+      : setImageIndex(imageIndex - 1);
   };
 
   const nextSlide = () => {
-    if (imageIndex === portfolio.length - 1) return setImageIndex(0);
-    return setImageIndex(imageIndex + 1);
+    imageIndex === portfolio.length - 1
+      ? setImageIndex(0)
+      : setImageIndex(imageIndex + 1);
   };
 
   if (!portfolio) return <Loader />;
@@ -27,27 +30,24 @@ export const Slider = ({ portfolio }) => {
           ⮜
         </Button>
         <div className={style.sliderContent}>
-          {portfolio.map(({ image, title }, index) => (
-            <div className={style.sliderItem} key={index}>
-              <img src={image} alt="" style={{ translate: `${-100 * imageIndex}%` }} />
-            </div>
+          {portfolio.map(({ image }, index) => (
+            <img src={image} style={{ translate: `${-100 * imageIndex}%` }} key={index} />
           ))}
-          ;
         </div>
         <div className={style.navBar}>
           {portfolio.map((_, index) => {
+            const isActive =
+              index === imageIndex
+                ? { background: 'var(--main-20)', color: 'black' }
+                : null;
+
             return (
               <Button
                 key={index}
                 onClick={() => setImageIndex(index)}
-                style={
-                  index === imageIndex
-                    ? { background: 'var(--main-20)', color: 'black' }
-                    : null
-                }
-              >
-                {index + 1}
-              </Button>
+                style={isActive}
+                children={index + 1}
+              />
             );
           })}
         </div>
@@ -56,4 +56,8 @@ export const Slider = ({ portfolio }) => {
       </div>
     </>
   );
+};
+
+Slider.propTypes = {
+  portfolio: PropTypes.array,
 };

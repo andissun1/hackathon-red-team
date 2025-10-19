@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProfiles } from '../../Store/appReducer';
 import { Loader } from '../../Shared/Loader/Loader';
 
-export const Main = (props) => {
+export const Main = () => {
   const dispatch = useDispatch();
   const favorites = useSelector((store) => store.app.favorites);
   const profiles = useSelector((store) => store.app.profiles);

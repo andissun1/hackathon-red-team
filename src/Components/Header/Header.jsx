@@ -5,7 +5,7 @@ import { Button } from '../../Shared/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../../Store/appReducer';
 
-export const Header = (props) => {
+export const Header = () => {
   const dispatch = useDispatch();
   const theme = useSelector((store) => store.app.theme);
   const routes = [
