@@ -6,6 +6,7 @@ const APP_TYPES = {
   removeFromFavorites: 'removeFromFavorites',
   setModalParams: 'setModalParams',
   closeModal: 'closeModal',
+  setTheme: 'setTheme',
 };
 
 export const appActions = {
@@ -16,12 +17,14 @@ export const appActions = {
   removeFromFavorites: (payload) => ({ type: APP_TYPES.removeFromFavorites, payload }),
   setModalParams: (payload) => ({ type: APP_TYPES.setModalParams, payload }),
   closeModal: () => ({ type: APP_TYPES.closeModal }),
+  setTheme: (payload) => ({ type: APP_TYPES.setTheme, payload }),
 };
 
 const initialState = {
   favorites: [],
   profiles: null,
   modal: null,
+  theme: null,
 };
 
 export const appReducer = (state = initialState, { type, payload }) => {
@@ -55,6 +58,11 @@ export const appReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         modal: null,
+      };
+    case APP_TYPES.setTheme:
+      return {
+        ...state,
+        theme: payload,
       };
     case APP_TYPES.resetAppState:
       return initialState;
@@ -103,4 +111,11 @@ export const getConfirmation = (params) => async (dispatch, getState) => {
       })
     );
   });
+};
+
+export const toggleTheme = () => async (dispatch, getState) => {
+  const currentTheme = getState().app.theme;
+  const theme = currentTheme === 'light' ? 'dark' : 'light';
+  dispatch(appActions.setTheme(theme));
+  document.body.dataset.theme = theme;
 };

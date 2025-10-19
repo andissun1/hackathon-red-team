@@ -15,6 +15,10 @@ export const routes = createBrowserRouter([
         Component: Main,
       },
       {
+        path: 'profile',
+        Component: Main,
+      },
+      {
         path: '/profile/:id',
         Component: Profile,
       },
