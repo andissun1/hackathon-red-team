@@ -53,11 +53,11 @@
     {
       "id": "03",
       "name": "Илья",
-      "surname": "Крутов",
-      "age": 19,
+      "surname": "Проскурин",
+      "age": 25,
       "imgURL": "https://i.pinimg.com/736x/5e/73/f9/5e73f978468820172160e6a1ad70d62e.jpg",
       "skills": { "html": 100, "css": 70, "javaScript": 80, "react": 80 },
-      "social": { "VK": "https://vk.com/id807345344?from=search" },
+      "social": { "VK": "https://vk.com/npockypuH" },
       "about": "Занимаюсь разработкой игры про ферму. Люблю футбол.",
       "badges": [
         { "text": "Разработчик", "color": "light" },
