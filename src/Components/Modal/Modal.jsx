@@ -9,8 +9,6 @@ export const Modal = () => {
   // Все данные для отображения получаем {} и рисуем HTML
   const modalParams = useSelector((store) => store.app.modal);
 
-  console.log(modalParams);
-
   const closeModal = () => modalParams.onClose();
   const confirm = () => modalParams.onConfirm();
 

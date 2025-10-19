@@ -7,7 +7,7 @@ import { Title } from '../../Shared/Title/Title';
 import style from './profile.module.css';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProfileByID } from '../../Store/profileReducer';
+import { getProfileByID, profileActions } from '../../Store/profileReducer';
 import { Loader } from '../../Shared/Loader/Loader';
 
 export const Profile = () => {
@@ -17,6 +17,7 @@ export const Profile = () => {
 
   useEffect(() => {
     dispatch(getProfileByID(profileID));
+    return () => dispatch(profileActions.removeProfile());
   }, [dispatch, profileID]);
 
   if (!profile.id) return <Loader />;

@@ -6,6 +6,7 @@ import { Text } from '../Text/Text';
 import style from './card.module.css';
 import { useNavigate } from 'react-router-dom';
 import { appActions, getConfirmation } from '../../Store/appReducer';
+import PropTypes from 'prop-types';
 
 export const Card = ({
   id,
@@ -54,4 +55,15 @@ export const Card = ({
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  surname: PropTypes.string,
+  age: PropTypes.number,
+  imgURL: PropTypes.string,
+  about: PropTypes.string,
+  favourite: PropTypes.bool,
+  badges: PropTypes.object,
 };

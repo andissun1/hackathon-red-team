@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import style from './button.module.css';
 export const Button = ({
   children,
@@ -17,4 +18,12 @@ export const Button = ({
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element, PropTypes.number]),
+  rounded: PropTypes.string,
+  cancel: PropTypes.bool,
+  onClick: PropTypes.func,
+  props: PropTypes.object,
 };

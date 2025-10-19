@@ -5,7 +5,7 @@ const PROFILE_TYPES = {
 
 export const profileActions = {
   setProfile: (payload) => ({ type: PROFILE_TYPES.setProfile, payload }),
-  removeProfile: (payload) => ({ type: PROFILE_TYPES.removeProfile, payload }),
+  removeProfile: () => ({ type: PROFILE_TYPES.removeProfile }),
 };
 
 const initialState = {

@@ -7,7 +7,7 @@ import style from './favourites.module.css';
 import { Text } from '../../Shared/Text/Text';
 import { Loader } from '../../Shared/Loader/Loader';
 
-export const Favorites = (props) => {
+export const Favorites = () => {
   const dispatch = useDispatch();
   const profiles = useSelector((store) => store.app.profiles);
   const favorites = useSelector((store) => store.app.favorites);
