@@ -21,12 +21,17 @@
 }
     
 [data-theme="dark"] {
-    --main-10: #121212;
-    --main-20: #1e1e1e;
-    --main-30: #2d2d2d;
-    --main-40: #8d8d8d;
-    --main-50: #b3b3b3;
-    --main-60: #ffffff;
+    --main-100: #fff;
+    --main-90: #f9f8f6;
+    --main-80: #eeece7;
+    --main-70: #e1dfdb;
+    --main-60: #bebab1;
+    --main-50: #a6a196;
+    --main-40: #7c7769;
+    --main-30: #655f53;
+    --main-20: #474338;
+    --main-10: #2b2822;
+    --main-0: #000;
 }
 
 @font-face {

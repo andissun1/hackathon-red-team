@@ -10,3 +10,7 @@
     margin: 0 auto;
     color: var(--main-60);
 }
+
+.link {
+    color: var(--main-100);
+}

@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import style from "./header.module.css";
 import { Logo } from "../Logo/Logo";
+import { Button } from "../../Shared/Button/Button";
+import { useTheme } from "../../Theme/useTheme";
+
 export const Header = (props) => {
+  const { theme, toggleTheme } = useTheme();
   const routes = [
     {
       name: "Главная",
@@ -24,6 +28,9 @@ export const Header = (props) => {
             </Link>
           ))}
         </div>
+        <Button onClick={toggleTheme}>
+          {theme === "light" ? "Темнее" : "Светлее"}
+        </Button>
       </div>
     </header>
   );

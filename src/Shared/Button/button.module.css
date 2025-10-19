@@ -5,7 +5,7 @@
     background: white;
     border: 1px solid var(--main-60);
     cursor: pointer;
-    color: var(--main-80);
+    color: #474338;
     transition: all .75s;
     font-weight: 500;
 }
@@ -14,7 +14,7 @@
 }
 
 .button:hover {
-    background: var(--main-20);
+    background: #eeece7;
 }
 
 .cancel {
